@@ -1,0 +1,37 @@
+{
+  "name": "monobank/acquiring-laravel",
+  "description": "Monobank Acquiring Laravel Package",
+  "type": "library",
+  "autoload": {
+    "psr-4": {
+      "Monobank\\LaravelAcquiring\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Monobank\\LaravelAcquiring\\Tests\\": "tests/"
+    }
+  },
+  "require": {
+    "php": ">=8.1",
+    "illuminate/support": "^9.0|^10.0|^11.0|^12.0"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^10.4",
+    "phpunit/phpunit": "*"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Monobank\\LaravelAcquiring\\Providers\\AcquiringServiceProvider"
+      ],
+      "aliases": {
+        "LaravelAcquiring": "Monobank\\LaravelAcquiring\\Facades\\LaravelAcquiringFacade"
+      }
+    }
+  },
+  "config": {
+    "sort-packages": true,
+    "optimize-autoloader": true
+  }
+}
